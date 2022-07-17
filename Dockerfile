@@ -8,7 +8,8 @@ COPY requirements.txt /app
 ## Step 2:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip3 --no-cache-dir install -r requirements.txt
+#RUN pip3 --no-cache-dir install -r requirements.txt
+RUN pip install covid
 
 ## Step 3:
 # Copy source code to working directory
