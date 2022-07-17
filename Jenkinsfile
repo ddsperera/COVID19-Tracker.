@@ -6,11 +6,11 @@ node {
   }
 
   stage("Trigger unit tests") {
-    sh 'python3 test.py' 
+    sh 'python3 Tracker.py' 
   }
   
   stage('Build image') {
-    app = docker.build("ddsperera/pipeline3")
+    app = docker.build("ddsperera/test-pipeline")
   }
   
   stage('Push image') {
